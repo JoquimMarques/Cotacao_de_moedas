@@ -1,0 +1,105 @@
+BoxLayout:
+    orientation: 'vertical'
+    padding: [20, 20, 20, 20]
+    spacing: 10
+    canvas.before:
+        Color:
+            rgba: 0, 0, 0.5, 1  # Cor de fundo azul escuro
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    # Título principal
+    Label:
+        text: "Cotações de Moedas"
+        font_size: 40
+        bold: True
+        color: 1, 1, 1, 1  # Cor branca
+        size_hint_y: None
+        height: self.texture_size[1]
+        halign: 'center'
+        canvas.before:
+            PushMatrix
+            Scale:
+                x: 1
+                y: 1
+            PopMatrix
+
+    # Seção para as cotações das moedas
+    GridLayout:
+        cols: 1
+        spacing: 10
+        size_hint_y: None
+        height: self.minimum_height
+        padding: [20, 20, 20, 20]
+
+        # Moeda 1
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: 50
+
+            Label:
+                text: "Dólar:"
+                font_size: 30
+                color: 1, 1, 1, 1  # Cor branca
+                width: self.texture_size[0]
+                halign: 'left'
+
+            Label:
+                id: moeda1
+                text: "Carregando..."
+                font_size: 30
+                color: 1, 1, 1, 1  # Cor branca
+                halign: 'right'
+        
+        # Moeda 2
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: 50
+
+            Label:
+                text: "Euro:"
+                font_size: 30
+                color: 1, 1, 1, 1  # Cor branca
+
+            Label:
+                id: moeda2
+                text: "Carregando..."
+                font_size: 30
+                color: 1, 1, 1, 1  # Cor branca
+
+        # Moeda 3
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: 50
+
+            Label:
+                text: "Bitcoin:"
+                font_size: 30
+                color: 1, 1, 1, 1  # Cor branca
+
+            Label:
+                id: moeda3
+                text: "Carregando..."
+                font_size: 30
+                color: 1, 1, 1, 1  # Cor branca
+
+        # Moeda 4
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: 50
+
+            Label:
+                text: "Eterion:"
+                font_size: 30
+                color: 1, 1, 1, 1  # Cor branca
+
+            Label:
+                id: moeda4
+                text: "Carregando..."
+                font_size: 30
+                color: 1, 1, 1, 1  # Cor branca
